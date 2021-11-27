@@ -16,15 +16,21 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const style = {
-  position: 'absolute',
-  top: '30%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 'auto',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
+  img: {
+    boxShadow:'3px 5px #888888'
+  },
+  deleteBox: {
+    position: 'absolute',
+    top: '30%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 'auto',
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  },
+
 };
 
 const ChosenBooks = ({books, deleteBook, target}) => {
@@ -48,7 +54,7 @@ const ChosenBooks = ({books, deleteBook, target}) => {
             </Tooltip>
           }
         >
-          <img src={book.img} alt='book' />
+          <img style={style.img} src={book.img} alt='book' />
           <ListItemText sx={{ paddingLeft:'10px'}} primary={book.title} />
         </ListItem>
       ))}
@@ -58,13 +64,13 @@ const ChosenBooks = ({books, deleteBook, target}) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style.deleteBox}>
             Delete {books[clickedIndex] ? books[clickedIndex].title : ''} ?
           <Stack 
             direction="row" 
             spacing={2} 
-            sx={
-              {marginTop:'10px', 
+            sx={{
+              marginTop:'10px', 
               display:'flex', 
               justifyContent:'center'
             }}>

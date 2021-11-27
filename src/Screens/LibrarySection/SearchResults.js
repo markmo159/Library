@@ -73,7 +73,10 @@ const SearchResults = ({results, addBookToTable,books}) => {
               alignItems:'center', 
               justifyContent:'space-between'
             }}>
-            <img style={{boxShadow:'3px 5px #888888'}} src={value.volumeInfo.imageLinks ? value.volumeInfo.imageLinks.thumbnail : null} alt='' />
+            <img 
+              style={{boxShadow:'3px 5px #888888'}} 
+              src={value.volumeInfo.imageLinks ? value.volumeInfo.imageLinks.thumbnail : null} alt='' 
+            />
             <Box 
             sx={{
               display:'flex', 
