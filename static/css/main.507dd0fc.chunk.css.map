@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Style/style.css"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SACF,CAEA,KACE,eACF","file":"main.507dd0fc.chunk.css","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nhtml {\r\n  overflow: hidden;\r\n}"]}
